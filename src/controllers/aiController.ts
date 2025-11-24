@@ -1,5 +1,9 @@
 import axios from "axios"
 import { Request, Response } from "express"
+import dotenv from "dotenv"
+dotenv.config()
+
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY as string
 
 export const aiGeneratedContent = async (req: Request, res: Response) => {
   try {
@@ -21,7 +25,7 @@ export const aiGeneratedContent = async (req: Request, res: Response) => {
       {
         headers: {
           "Content-Type": "application/json",
-          "X-goog-api-key": "AIzaSyB_xxa0BM4hqTD4MFaMFcYwpWtfloSRdBM"
+          "X-goog-api-key": GEMINI_API_KEY
         }
       }
     )

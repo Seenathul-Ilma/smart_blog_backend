@@ -43,10 +43,9 @@ router.post("/create", authenticate, authorization(Role.ADMIN, Role.AUTHOR), upl
 12. need to config cloudinary
  i) in .env -> 
 // genearated api key name in claudinary - smart_blog
-CLOUDINARY_NAME=dmr7tbezg
-CLOUDINARY_API_KEY=171942685523795
-CLOUDINARY_API_SECRET=itRM61TCjDwhpXWIK_DvuMkTNO8
- // CLOUDINARY_URL=cloudinary://141876191461479:W23LKPbxHpE_MAZJnJecjUcoQrc@dmr7tbezg
+CLOUDINARY_NAME=<CLOUDINARY_NAME>
+CLOUDINARY_API_KEY=<CLOUDINARY_API_KEY>
+CLOUDINARY_API_SECRET=<CLOUDINARY_API_SECRET>
 
  ii) create config folder inside src to define configurations
  import { v2 as cloudinary } from "cloudinary"
