@@ -21,12 +21,13 @@ const app = express()
 app.use(express.json())
 
 app.use(cors({
-    origin: ["http://localhost:5173"],  // frontend. not backend ("http://localhost:5000/")
+    origin: ["http://localhost:5173", "https://samrt-blog-frontend.vercel.app"],  // frontend. not backend ("http://localhost:5000/")
     methods: ["POST", "GET", "PUT", "DELETE", "PATCH"]  // optional
 }))
 
 app.use("/api/v1/auth", authRoutes)
 app.use("/api/v1/post", postRoutes)
+
 app.get("/",(req,res) => {
     res.send("Backend is running..!")
 })
