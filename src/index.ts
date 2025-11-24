@@ -27,6 +27,9 @@ app.use(cors({
 
 app.use("/api/v1/auth", authRoutes)
 app.use("/api/v1/post", postRoutes)
+app.get("/",(req,res) => {
+    res.send("Backend is running..!")
+})
 
 //app.use((req, res, next) => {
 //    next()
